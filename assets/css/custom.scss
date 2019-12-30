@@ -291,14 +291,24 @@ ul {
 	width: 100%;
 }
 
+
+.port-link {
+	// display: inline-block;
+	
+	&:hover {
+		color: #333333;
+	}
+}
+
 .portfolio-item {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	// padding: 10px;
+	padding: 10px;
 	text-align: left;
-
+	
 	&.one {
+		
 		background: #D3CCE3;
 		/* fallback for old browsers */
 		background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);
@@ -364,16 +374,22 @@ font-family: "Gilroy-extrabold";
     display: block;
     margin: 12px 0 0;
     color: #0b0b0b;
-    font-weight: 900;
+		font-weight: 900;
+		
+		& a:hover {
+			color: #00bec5 !important;
+		}
 }
 		
-a.next :hover{
+.next::after {
 	color: #00bec5;
+	& a:hover {
+		color: #00bec5 !important;
+	}
 }
 
-.next::after:hover {
-    color: #00bec5;
-}
+
+
 
 @media (max-width: 992px) {
 

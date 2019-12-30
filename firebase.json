@@ -5,6 +5,22 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [{
+      "source": "**/lantern/",
+      "destination": "/lantern.html"
+    }, {
+      "source": "**/amazonkids/",
+      "destination": "/amazonkids.html"
+    }, {
+      "source": "countable/",
+      "destination": "/countable.html"
+    }, {
+      "source": "**/about/",
+      "destination": "/about.html"
+    }, {
+      "source": "**/streamloanio/",
+      "destination": "/streamloanio.html"
+    }]
   }
 }
