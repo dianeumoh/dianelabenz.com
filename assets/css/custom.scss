@@ -243,7 +243,7 @@
 
 }
 
-ul {
+.home-nav-bar ul {
   list-style: none;
   text-decoration: none;
   display: flex;
@@ -441,8 +441,8 @@ font-family: "Gilroy-extrabold";
 	max-width: 60%;
 
 	&.portrait {
-		max-height: 800px;
-		max-width: 100%;
+		width: 100%;
+		height: auto;
 	}
 }
 
