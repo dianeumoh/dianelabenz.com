@@ -2,32 +2,9 @@
 ---
 /* Custom CSS */
 
-#awwwards {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 90px;
-	height: 135px;
-	text-indent: -666em;
-	overflow: hidden;
-	z-index: 999;
-	background-repeat: no-repeat;
-	background-size: 90px 135px;
-	background-image: url(../img/root/awwwards_honorable_white.png);
-}
+a:hover {
 
-#wpselected {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 90px;
-	height: 90px;
-	text-indent: -666em;
-	overflow: hidden;
-	z-index: 999;
-	background-repeat: no-repeat;
-	background-size: 90px 90px;
-	background-image: url(../img/root/wpselected-badge-left.png);
+	color: #00bec5;
 }
 
 .vlt-custom--9135 .typed-cursor {

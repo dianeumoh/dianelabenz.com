@@ -2420,7 +2420,7 @@ table thead th {
 .vlt-footer--style-3 {
     padding: 140px 0;
 
-    background-image: url('../img/attachment-04.jpg');
+    /* background-image: url('../img/attachment-04.jpg'); */
     background-position: center;
     background-size: cover;
 }
@@ -2524,7 +2524,7 @@ table thead th {
 .vlt-footer--widgetized {
     padding: 120px 0;
 
-    background-image: url('../img/attachment-04.jpg');
+    /* background-image: url('../img/attachment-04.jpg'); */
     background-position: center;
     background-size: cover;
 }
