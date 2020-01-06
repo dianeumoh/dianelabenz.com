@@ -212,6 +212,14 @@ body {
   align-self: flex-start;
 }
 
+.project-logo-lg {
+  padding-top: 50px;
+  align-self: flex-start;
+  max-width: 90%;
+}
+
+
+
 /* learn more accordian */
 .collapsible {
   display: inline-block;
@@ -269,7 +277,10 @@ body {
 
 .portrait-preview {
   max-height: 800px;
-  /* max-width: 60%; */
+}
+
+.portrait-preview-sm {
+  max-height: 600px;
 }
 
 /* Case study hero style */
@@ -289,6 +300,10 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #CFDEF3, #E0EAFC);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.countable-bg {
+  background-image: linear-gradient(109.6deg, rgba(204, 228, 247, 1) 11.2%, rgba(237, 246, 250, 1) 100.2%);
 }
 
 .vlt-page-title-hero__content p {
