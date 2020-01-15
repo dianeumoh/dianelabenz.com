@@ -289,6 +289,11 @@ body {
   max-height: 600px;
 }
 
+.portrait-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* Case study hero style */
 .lantern {
   background-color: #D3CCE3;
@@ -318,6 +323,23 @@ body {
 
 .title-caption {
   font-size: 28px !important;
+}
+
+.project-overview-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-overview-item {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .project-overview-item {
+    min-width: 45%;
+  }
+
 }
 
 /* Footer */

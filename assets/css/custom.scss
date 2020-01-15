@@ -1,4 +1,4 @@
---- 
+---
 ---
 /* Custom CSS */
 
@@ -198,32 +198,32 @@ a:hover {
 // New Nav Bar
 
 .home-nav-bar {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 20px 10px;
-  background-color: #F8F8F8;
-  font-family: Helvetica, sans-serif;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 20px 10px;
+	background-color: #F8F8F8;
+	font-family: Helvetica, sans-serif;
 }
 
 .home-logo {
-  display: flex;
-  padding-left: 50px;
-  text-transform: uppercase;
+	display: flex;
+	padding-left: 50px;
+	text-transform: uppercase;
 	font-size: 22px;
 	font-family: "gilroy-extrabold";
 
 	& a {
-  color: #333333;
-  align-self: center;
-}
+		color: #333333;
+		align-self: center;
+	}
 
-p {
-	font-family: "Muli" !important;
-	font-size: 16px;
-	align-self: center;
-	padding-left: 20px;
-	text-transform: initial;
+	p {
+		font-family: "Muli" !important;
+		font-size: 16px;
+		align-self: center;
+		padding-left: 20px;
+		text-transform: initial;
 	}
 
 }
@@ -233,9 +233,9 @@ p {
 
 
 .home-nav-bar ul {
-  list-style: none;
-  text-decoration: none;
-  display: flex;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
 }
 
 .home-nav-items {
@@ -248,24 +248,24 @@ p {
 		padding: 10px 20px;
 	}
 
- & a {
- color: #333333;
- text-decoration: none;
+	& a {
+		color: #333333;
+		text-decoration: none;
 	}
 
 	&::after {
-	content: '';
-	position: absolute;
-	height: 2px;
-	background-color: tomato;
-	width: 0;
-	left: 50%;
-	bottom: 0;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-  	transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+		content: '';
+		position: absolute;
+		height: 2px;
+		background-color: tomato;
+		width: 0;
+		left: 50%;
+		bottom: 0;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+		transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 	}
 
 	& a:hover {
@@ -283,7 +283,7 @@ p {
 
 .port-link {
 	// display: inline-block;
-	
+
 	&:hover {
 		color: #333333;
 	}
@@ -295,30 +295,33 @@ p {
 	width: 100%;
 	padding: 10px;
 	text-align: left;
-	
+
 	&.one {
-		
+
 		background: #D3CCE3;
 		/* fallback for old browsers */
 		background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);
 		/* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to top, #E9E4F0, #D3CCE3);
 		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-			margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	&.two {
-		background: #E0EAFC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background: #E0EAFC;
+		/* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+		/* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-			margin-bottom: 20px;
+		margin-bottom: 20px;
 
 	}
 
 	&.three {
-background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(242,237,193,1) 0%, rgba(247,235,116,1) 90.1% );
-
+		// background-image: radial-gradient(circle farthest-corner at 10% 20%, #f2edc1 0%, #f7eb74 90.1%);
+		background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 		padding-bottom: 20px;
 	}
 }
@@ -343,35 +346,36 @@ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(242,
 	padding: 10px;
 	font-weight: bold;
 
-&:hover {
-	background-color: #F8F8F8 !important;
-	border: 2px solid #F8F8F8 !important;
-	color: #0b0b0b !important;  
-	transition: background-color 0.3s ease-in,
-	color 0.3s ease-in;
-}
+	&:hover {
+		background-color: #F8F8F8 !important;
+		border: 2px solid #F8F8F8 !important;
+		color: #0b0b0b !important;
+		transition: background-color 0.3s ease-in,
+			color 0.3s ease-in;
+	}
 
-& a:hover {
-	color: #0b0b0b !important; 
-}
+	& a:hover {
+		color: #0b0b0b !important;
+	}
 
 }
 
 .vlt-display-1 {
-font-family: "Gilroy-extrabold";
-    font-size: 14px;
-    display: block;
-    margin: 12px 0 0;
-    color: #0b0b0b;
-		font-weight: 900;
-		
-		& a:hover {
-			color: #00bec5 !important;
-		}
+	font-family: "Gilroy-extrabold";
+	font-size: 14px;
+	display: block;
+	margin: 12px 0 0;
+	color: #0b0b0b;
+	font-weight: 900;
+
+	& a:hover {
+		color: #00bec5 !important;
+	}
 }
-		
+
 .next::after {
 	color: #00bec5;
+
 	& a:hover {
 		color: #00bec5 !important;
 	}
@@ -388,23 +392,23 @@ font-family: "Gilroy-extrabold";
 	}
 
 	.home-nav-items {
-	padding-right: 10px;
-	font-size: 14px;
+		padding-right: 10px;
+		font-size: 14px;
 	}
 
-.portfolio-item {
-	flex-direction: column;
-	padding: 20px;
-	
+	.portfolio-item {
+		flex-direction: column;
+		padding: 20px;
 
-	&.three {
-		padding-bottom: 70px;
+		&.three {
+			padding-bottom: 70px;
+		}
 	}
-}
 
 	.portfolio-image {
 		align-self: center;
 		padding: 20px 0;
+		margin-top: 30px;
 	}
 
 	.portfolio-info {
@@ -415,26 +419,23 @@ font-family: "Gilroy-extrabold";
 
 @media (min-width: 993px) {
 
-.portfolio-info p {
-	max-width: 500px;
-}
-
-.portfolio-info {
-	align-self: center;
-	padding-left: 150px;
-}
-
-.portfolio-image {
-	align-self: center;
-	padding: 50px 150px 50px 0;
-	max-width: 60%;
-
-	&.portrait {
-		width: 100%;
-		height: auto;
+	.portfolio-item .row {
+		margin-top:20px;
 	}
-}
 
+	.portfolio-info p {
+		max-width: 500px;
+	}
 
+	.portfolio-image {
+		align-self: center;
+		padding: 50px 0px;
+		// max-width: 60%;
+
+		&.portrait {
+			width: 100%;
+			height: auto;
+		}
+	}
 
 }

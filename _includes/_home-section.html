@@ -1,0 +1,16 @@
+<a class="port-link" href="{{ include.link }}">
+  <div class="portfolio-item {{ include.project_class }}">
+    <div class="container">
+      <div class="row">
+        <div class="portfolio-info col-lg-4 offset-1" data-aos="fade-right" data-aos-delay="0">
+          <h2>{{ include.name }}</h2>
+          <span class="vlt-display-1">{{ include.platforms }}</span>
+          <p>{{ include.description }}</p>
+          <span class="ghost-button">{{ include.cta }}</span>
+        </div>
+        <img class="portfolio-image col-lg-6 offset-lg-0" src="{{ include.image_path }}"
+          alt="{{ include.name }} Home Screen">
+      </div>
+    </div>
+  </div>
+</a>

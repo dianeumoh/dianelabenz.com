@@ -39,45 +39,37 @@
 <body>
   <!---->
   <div class="portfolio-container">
-    <a class="port-link" href="/lantern/">
-      <div class="portfolio-item one">
-        <div class="portfolio-info" data-aos="fade-right" data-aos-delay="0">
-          <h2>Lantern</h2>
-          <span class="vlt-display-1">Desktop MVP, Web, B2C</span>
-          <p>Design a job platform to connect software developers to exciting remote opportunities?<br /> You got it!
-          </p>
-          <span class="ghost-button">View Case Study
-          </span>
-        </div>
-        <img class="portfolio-image" src="/assets/images/HomeDay60_laptop.png" alt="Lantern Home Screen">
-      </div>
-    </a>
+    <span>
+      {% include _home-section.html link="/lantern/"
+        name="Lantern"
+        project_class="one"
+        platforms="Desktop MVP, Web, B2C"
+        description="Design a job platform to connect software developers to exciting remote opportunities?  You got it!"
+        cta="View Case Study"
+        image_path="/assets/images/HomeDay60_laptop.png"
+      %}
+    </span>
 
-    <a class="port-link" href="/streamloanio/">
-      <div class="portfolio-item two">
-        <div class="portfolio-info" data-aos="fade-right" data-aos-delay="0">
-          <h2>Streamloan.io</h2>
-          <span class="vlt-display-1">Information Architecture, Mobile, SaaS</span>
-          <p>Loan officers needed a better way to track and manage the loan process. See the final solution. </p>
-          <span class="ghost-button">View Case Study</span>
-        </div>
-        <img class="portfolio-image" src="/assets/images/Streamloan_home_new.png" alt="Streamloan Home Screen">
-      </div>
-    </a>
+    <span>
+      {% include _home-section.html link="/streamloanio/" 
+        name="Streamloan.io"
+        project_class="two"
+        platforms="Information Architecture, Mobile, SaaS" description="Loan officers needed a better way to track and manage the loan process. See the final solution."
+        cta="View Case Study"
+        image_path="/assets/images/Streamloan_home_new.png"
+      %}
+    </span>
 
-    <a class="port-link" href="#">
-      <div class="portfolio-item three">
-        <div class="portfolio-info" data-aos="fade-right" data-aos-delay="0">
-          <h2>Amazon Kids</h2>
-          <span class="vlt-display-1">Landing Page, Responsive Web, B2C</span>
-
-          <p>Developing a one-stop resource for parent's needs through information artchitecture to increase brand
-            awareness and conversion rates.</p>
-          <span class="ghost-button">Coming Soon</span>
-        </div>
-        <img class="portfolio-image portrait" src="/assets/images/Amazonkids_homescreen.png" alt="Amazon Home Screen">
-      </div>
-    </a>
+    <span>
+      {% include _home-section.html link="#" 
+        name="Amazon Kids"
+        project_class="three"
+        platforms="Landing Page, Responsive Web, B2C"
+        description="Developing a one-stop resource for parent's needs through information artchitecture to increase brand awareness and conversion rates."
+        cta="Coming Soon"
+        image_path="/assets/images/Amazonkids_homescreen.png"
+      %}
+    </span>
   </div>
   <script src="/assets/scripts/vlt-plugins.min.js"></script>
   <script src="/assets/scripts/vlt-helpers.js"></script>
