@@ -296,21 +296,11 @@ body {
 
 /* Case study hero style */
 .lantern {
-  background-color: #D3CCE3;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #E9E4F0, #D3CCE3);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #FAFAFA;
 }
 
 .streamloan-bg {
-  background-color: #E0EAFC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #CFDEF3, #E0EAFC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #FAFAFA;
 }
 
 .countable-bg {
@@ -346,7 +336,7 @@ body {
 
 .vlt-footer--widgetized {
   padding: 80px 0;
-  background-color: #f8f8f8;
+  background-color: #FFF;
   background-position: center;
   background-size: cover;
 }
