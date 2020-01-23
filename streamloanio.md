@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Streamloan.io Case Study
+title: StreamLoan Case Study
 ---
 
 {% include _streamloan_case_study.html %}

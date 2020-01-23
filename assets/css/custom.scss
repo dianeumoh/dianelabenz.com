@@ -2,6 +2,7 @@
 ---
 /* Custom CSS */
 
+
 a:hover {
 
 	color: #00bec5;
@@ -350,7 +351,7 @@ background-color: #fafafa;
 	text-align: center;
 	border-radius: 4px;
 	padding: 10px;
-	// font-weight: bold;
+	
 
 	&:hover {
 		background-color: #333333 !important;
@@ -396,6 +397,43 @@ background-color: #fafafa;
 	}
 }
 
+// Better ordered lists
+
+.number-circle-list {
+    list-style: none;
+    padding-left: 1rem;
+    counter-reset: circle-counter;
+}
+
+.number-circle-list--list-item {
+    counter-increment: circle-counter;
+    margin-bottom: 1rem*.45;
+    &:before {
+        content: counter(circle-counter);
+        background-color: #F8F8F8;
+        width: 1rem*1.5;
+        height: 1rem*1.5;
+        border-radius: 50%;
+				display: inline-block;
+				font-family: "Gilroy-extrabold";
+				font-size: 1rem*.85;
+				border-style: solid;
+				border-width: 1px;
+				border-color: #555555;
+        line-height: 1rem*1.5;
+        color: #333333;
+        text-align: center;
+        margin-right: 1rem*.5;
+        position: relative;
+        top: -2px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .number-circle-list--list-item {
+        margin-left: 1rem*.25;
+    }
+}
 
 
 
