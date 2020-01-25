@@ -1,3 +1,6 @@
+---
+---
+
 .vertical-row {
   display: flex;
   justify-content: center;
@@ -278,29 +281,41 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-}
 
-.streamloan-iterations>div {
+  &>div {
   width: 21%;
   text-align: center;
+  }
+
+  & p {
+  font-weight: bold;
+  margin-top: 40px;
+  font-size: 18px;
+  color: #005383;
+  }
 }
 
 .streamloan-iterations-2 {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-}
 
-.streamloan-iterations-2>div {
-  width: 21%;
-  text-align: center;
-}
+  &>div {
+    width: 25%;
+    text-align: center;
+  }
 
-.streamloan-iterations p {
+  & p {
   font-weight: bold;
   margin-top: 40px;
-  Font-size: 18px;
+  font-size: 18px;
   color: #005383;
+  }
+
+  & img {
+    margin-bottom: 80px;
+    
+  }
 }
 
 
