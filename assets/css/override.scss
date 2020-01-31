@@ -196,8 +196,10 @@ body {
 
 .about-link {
   color: #00bec5 !important;
-  text-decoration: underline;
-  
+
+  & :hover {
+  color: #00bec5 !important;
+  }
 }
 
 
