@@ -5,5 +5,3 @@
 layout: home
 title: Diane Labenz
 ---
-
-{% include _index.html %}

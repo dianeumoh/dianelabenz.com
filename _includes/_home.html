@@ -1,80 +1,133 @@
-<html
-  class="no-js vlt-is--homepage-10 vlt-is--header-fullscreen vlt-is--footer-style-4 vlt-is--footer-fixed vlt-is--lowercase-mode"
-  lang="en">
+<html class="no-js">
 
 <head>
-  <meta charset="utf-8" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155847764-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155847764-1');
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ page.title }}</title>
-  <meta name="description" content="Diane's Product Design Portfolio" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="Diane Labenz Product Design Portfolio" />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Custom-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="/assets/css/hover.css" rel="stylesheet">
+
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/root/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/root/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/root/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/images/root/site.webmanifest" />
-
-  <!--Framework-->
-  <link rel="stylesheet" href="/assets/css/framework/bootstrap.min.css" />
-  <!--Plugins-->
-  <link rel="stylesheet" href="/assets/css/vlt-plugins.css" />
-  <!--Fonts-->
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800%7CMuli:400,400i,600%7CPlayfair+Display:700i"
-    rel="stylesheet" />
+  <!-- Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,500i,600,600i,700,700i,800,800i,900&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <!--Icons-->
-  <link rel="stylesheet" href="/assets/fonts/fontawesome/font-awesome.min.css" />
-
-  <!--Style-->
-  <link rel="stylesheet" href="/assets/css/vlt-style.css" />
-  <!--Custom-->
-  <link rel="stylesheet" href="/assets/css/custom.css" />
-  <link rel="stylesheet" href="/assets/css/override.css" />
+  <script src="https://kit.fontawesome.com/e33123159d.js" crossorigin="anonymous"></script>
 </head>
-{% include _navigation.html %}
 
 <body>
-  <!---->
-  <div class="portfolio-container">
-    <span>
-      {% include _home-section.html link="/lantern/"
-        name="Lantern"
-        project_class="one"
-        platforms="MVP, Web, B2C"
-        description="Helping remote developers<br/> land their dream role"
-        cta="View More"
-        image_path="/assets/images/HomeDay60_laptop.png"
-      %}
-    </span>
+  <!-- Nav -->
+  {% include _navbar.html %}
+  <!-- Intro -->
 
-    <span>
-      {% include _home-section.html link="/streamloanio/" 
-        name="StreamLoan"
-        project_class="two"
-        platforms="Information Architecture, Mobile, SaaS" description="Taking the headache out of <br/>the loan process"
-        cta="View More"
-        image_path="/assets/images/Streamloan_home_new.png"
-      %}
-    </span>
-
-    <span>
-      {% include _home-section.html link="#" 
-        name="Amazon"
-        project_class="three"
-        platforms="Landing Page, Web, B2C"
-        description="Creating a one-stop resource <br/>for parents"
-        cta="Coming Soon"
-        image_path="/assets/images/Amazonkids_homescreen.png"
-      %}
-    </span>
+  <div class="container-fluid intro">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 intro-row me">
+        Welcome, I'm Diane!
+      </div>
+      <div class="col-md-10 offset-md-1 intro-row info">
+        A product designer who codes with a penchant for spicy foods 🔥.
+      </div>
+      <div class="col-md-10 offset-md-1 intro-row button floating">Take a look </div>
+      <div class="col-md-10 offset-md-1 intro-row arrow floating">
+        <img src="/assets/images/Home_arrow.svg">
+      </div>
+      <div class="col-lg-12 intro-row wave"><img src="/assets/images/Wave.png"></div>
+    </div>
   </div>
-  <script src="/assets/scripts/vlt-plugins.min.js"></script>
-  <script src="/assets/scripts/vlt-helpers.js"></script>
-  <script src="/assets/scripts/vlt-controllers.min.js"></script>
+  <!-- End Intro -->
+
+  <!-- Case Study Items -->
+  <div class="container-fluid">
+    <div class="row cs-one">
+      <div data-aos="fade-up" class="col-md-3 offset-md-1 vertical-row">
+        <h2>Lantern</h2>
+        <div class="case-study-tags">
+          <div class="cs-tags one">WEB</div>
+          <div class="cs-tags one">B2C</div>
+          <div class="cs-tags one">MVP</div>
+        </div>
+        <div class="cs-description">
+          <p>Helping remote developers land their dream role</p>
+        </div>
+        <div class="cs-button">
+          <div class="top-btn btn-first">Dive right in</div>
+        </div>
+      </div>
+      <div data-aos="fade-up" class="col-md-7">
+        <div class="cs-one-image number-one">
+          <img src="/assets/images/Lantern_home_mockup_new.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row cs-two">
+    <div data-aos="fade-right" class="col-md-6 vertical-row offset-md-1">
+      <h2>StreamLoan</h2>
+      <div class="case-study-tags">
+        <div class="cs-tags two">MOBILE</div>
+        <div class="cs-tags two">SAAS</div>
+      </div>
+      <div class="cs-description">
+        <p>Taking the headache out of the loan process</p>
+      </div>
+      <div class="cs-button">
+        <div class="top-btn first-cs-top btn-second">See the solution</div>
+      </div>
+    </div>
+    <div data-aos="fade-right" class="col-md-4">
+      <div class="cs-one-image number-two"><img src="/assets/images/Streamloan_home_mockup_new.png"></div>
+    </div>
+  </div>
+  <div class="row cs-three">
+    <div data-aos="fade-left" class="col-md-3 offset-md-1 vertical-row">
+      <h2>Amazon</h2>
+      <div class="case-study-tags">
+        <div class="cs-tags three">WEB</div>
+        <div class="cs-tags three">B2C</div>
+      </div>
+      <div class="cs-description">
+        <p>Creating a one-stop resource for parents</p>
+      </div>
+      <div class="cs-button">
+        <div class="top-btn first-cs-top btn-third">Coming soon</div>
+      </div>
+    </div>
+    <div data-aos="fade-left" class="col-md-7">
+      <div class="cs-one-image number-three"><img src="/assets/images/Amazonkids_homescreen.png"></div>
+    </div>
+  </div>
+  <!-- Footer -->
+  {% include _footer.html %}
 </body>
-{% include _footer.html %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </html>
