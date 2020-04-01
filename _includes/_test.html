@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <title>Document</title>
+
+  <style>
+    .wave {
+      width: 100%;
+      height: 500px;
+      background-size: 100% 100%, cover;
+      background-position: top center;
+      background: url("/assets/images/Wave_2.png") center no-repeat;
+      /* Cover - scales the image as large as possible without stretching the image */
+      /* Contain - scales the image as large as possible without cropping or stretching the image (if the image proportions differ from
+      the element, cover will crop it vertically or horizontally to get rid of empty space) */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    @media (max-width: 600) {
+      .wave {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="wave">
+      <!-- <img src="/assets/images/Wave.png"> -->
+    </div>
+  </div>
+
+</body>
+
+</html>

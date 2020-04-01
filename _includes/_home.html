@@ -13,6 +13,23 @@
 
     gtag('config', 'UA-155847764-1');
   </script>
+  <!-- Wave image resize -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    // $(document).ready(function () {
+    //   var $winwidth = $(window).width();
+    //   $(".wave img").attr({
+    //     width: $winwidth
+    //   });
+    //   $(window).bind("resize", function () {
+    //     var $winwidth = $(window).width();
+    //     $(".wave img").attr({
+    //       width: $winwidth
+    //     });
+    //   });
+    // });
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ page.title }}</title>
@@ -20,10 +37,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Custom-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="/assets/css/reset.css" />
-  <link rel="stylesheet" href="/assets/css/custom.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="/assets/css/hover.css" rel="stylesheet">
 
@@ -43,83 +60,69 @@
 <body>
   <!-- Nav -->
   {% include _navbar.html %}
-  <!-- Intro -->
 
-  <div class="container-fluid intro">
-    <div class="row">
-      <div class="col-md-10 offset-md-1 intro-row me">
+  <!-- Intro -->
+  <div class="intro">
+    <h1 class="intro__headline">
+      <span class="intro__headline-welcome">
         Welcome, I'm Diane!
-      </div>
-      <div class="col-md-10 offset-md-1 intro-row info">
-        A product designer who codes with a penchant for spicy foods 🔥.
-      </div>
-      <div class="col-md-10 offset-md-1 intro-row button floating">Take a look </div>
-      <div class="col-md-10 offset-md-1 intro-row arrow floating">
-        <img src="/assets/images/Home_arrow.svg">
-      </div>
-      <div class="col-lg-12 intro-row wave"><img src="/assets/images/Wave.png"></div>
-    </div>
+      </span>
+      A product designer who codes with a penchant for spicy foods 🔥.
+    </h1>
+    <div class="intro__btn floating"><span>Take a look</span><img src="/assets/images/Home_arrow.svg"></div>
+    <img class="intro__wave" src="/assets/images/Wave.png">
   </div>
   <!-- End Intro -->
 
-  <!-- Case Study Items -->
-  <div class="container-fluid">
-    <div class="row cs-one">
-      <div data-aos="fade-up" class="col-md-3 offset-md-1 vertical-row">
+  <!-- Case Study Lantern -->
+  <div class="portfolio">
+    <div class="portfolio-container portfolio-container--lantern">
+      <div class="portfolio-container__info">
         <h2>Lantern</h2>
-        <div class="case-study-tags">
-          <div class="cs-tags one">WEB</div>
-          <div class="cs-tags one">B2C</div>
-          <div class="cs-tags one">MVP</div>
+        <div class="portfolio-container__tags-container">
+          <div class="portfolio-container__tag">WEB</div>
+          <div class="portfolio-container__tag">B2C</div>
+          <div class="portfolio-container__tag">MVP</div>
         </div>
-        <div class="cs-description">
-          <p>Helping remote developers land their dream role</p>
-        </div>
-        <div class="cs-button">
-          <div class="top-btn btn-first">Dive right in</div>
+        <p class="portfolio-container__description">Helping remote developers land their dream role</p>
+        <div class="btn">
+          Dive right in
         </div>
       </div>
-      <div data-aos="fade-up" class="col-md-7">
-        <div class="cs-one-image number-one">
-          <img src="/assets/images/Lantern_home_mockup_new.png">
+      <img class="portfolio-container__image" src="/assets/images/Lantern_home_mockup_new.png">
+    </div>
+
+    <!-- Case Study StreamLoan  -->
+    <div class="portfolio-container portfolio-container--streamloan">
+      <div class="portfolio-container__info vertical-row">
+        <h2>StreamLoan</h2>
+        <div class="portfolio-container__tags-container">
+          <div class="portfolio-container__tag">Mobile</div>
+          <div class="portfolio-container__tag">SAAS</div>
+        </div>
+        <p class="portfolio-container__description">Taking the headache out of the loan process</p>
+        <div class="btn">
+          See the solution
         </div>
       </div>
+      <img class="portfolio-container__image--portrait" src="/assets/images/Streamloan_home_mockup_new.png">
     </div>
-  </div>
-  <div class="row cs-two">
-    <div data-aos="fade-right" class="col-md-6 vertical-row offset-md-1">
-      <h2>StreamLoan</h2>
-      <div class="case-study-tags">
-        <div class="cs-tags two">MOBILE</div>
-        <div class="cs-tags two">SAAS</div>
+
+    <!-- Case Study Amazon -->
+
+    <div class="portfolio-container portfolio-container--amazon portfolio-container--info-first">
+      <div class="portfolio-container__info">
+        <h2>Amazon</h2>
+        <div class="portfolio-container__tags-container">
+          <div class="portfolio-container__tag">Web</div>
+          <div class="portfolio-container__tag">B2C</div>
+        </div>
+        <p class="portfolio-container__description">Creating a one-stop resource for parents</p>
+        <div class="btn">
+          Coming soon
+        </div>
       </div>
-      <div class="cs-description">
-        <p>Taking the headache out of the loan process</p>
-      </div>
-      <div class="cs-button">
-        <div class="top-btn first-cs-top btn-second">See the solution</div>
-      </div>
-    </div>
-    <div data-aos="fade-right" class="col-md-4">
-      <div class="cs-one-image number-two"><img src="/assets/images/Streamloan_home_mockup_new.png"></div>
-    </div>
-  </div>
-  <div class="row cs-three">
-    <div data-aos="fade-left" class="col-md-3 offset-md-1 vertical-row">
-      <h2>Amazon</h2>
-      <div class="case-study-tags">
-        <div class="cs-tags three">WEB</div>
-        <div class="cs-tags three">B2C</div>
-      </div>
-      <div class="cs-description">
-        <p>Creating a one-stop resource for parents</p>
-      </div>
-      <div class="cs-button">
-        <div class="top-btn first-cs-top btn-third">Coming soon</div>
-      </div>
-    </div>
-    <div data-aos="fade-left" class="col-md-7">
-      <div class="cs-one-image number-three"><img src="/assets/images/Amazonkids_homescreen.png"></div>
+      <img class="portfolio-container__image" src="/assets/images/Amazonkids_homescreen.png">
     </div>
   </div>
   <!-- Footer -->

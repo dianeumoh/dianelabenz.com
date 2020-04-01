@@ -1,7 +1,7 @@
 ---
 ---
 
-// Font
+// Fonts
 @font-face {
   font-family: "gilroy-extrabold";
   src: url("/assets/fonts/gilroy_extrabold_macroman/gilroy-extrabold-webfont.woff2") format("woff2"),
@@ -18,24 +18,28 @@
   font-style: normal;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 h1 {
- font-size: 58px;
+ font-size: 2.9em;
 }
 
 h2 {
- font-size: 48px;
+ font-size: 2.4em;
 }
 
 h3 {
- font-size: 30px;
+ font-size: 1.5em;
 }
 
 .cs-subheader {
-    text-transform: uppercase;
-    color: #7b7479;
-    font-family: "Muli";
-    font-weight: 400;
-		font-size: 24px;
+	text-transform: uppercase;
+	color: #7b7479;
+	font-family: "Muli";
+	font-weight: 400;
+	font-size: 24px;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { 
@@ -46,7 +50,7 @@ h3 {
 
 p { 
 	font-family: "Muli";
-	font-size: 20px; 
+	font-size: 1.25em; 
 	line-height: 1.65; 
 	min-width: 320px; 
 	margin: 0; 
@@ -55,13 +59,18 @@ p {
 	color: #333; 
 }
 
+img {
+	max-width: 100%;
+	// height: auto;
+}
+
 //Nav 
 .nav-bar {
 	display: flex;
 	justify-content: space-between;
 	background-color: #E6FAFD;
 	width: 100%;
-	padding: 40px 10px;
+	padding: 2em 1.2em;
 	font-family:"gilroy-extrabold";
 	color: #333;
 
@@ -96,14 +105,16 @@ p {
 }
 
 .logo {
-	font-size: 22px;
-	padding-left: 50px;
+	font-size: 1.4rem;
+	padding-left: 2em;
 }
+
 
 .nav-items {
  display: flex;
- padding-right: 50px;
- font-size: 18px;
+ justify-content: center;
+ padding-right: 2em;
+ font-size: 1.25em;
 
  & ul {
 	 display: flex;
@@ -112,10 +123,24 @@ p {
  }
 
  & li {
-	 padding-left: 40px;
+	 align-self: center;
+	 padding-left: 1.3em;
  }
 }
 
+@media (max-width: 600px) {
+
+	.logo {
+		font-size: 1em;
+		padding-left: 10px;
+	}
+
+	.nav-items {
+		padding-right: 10px;
+		font-size: .8em;
+	}
+
+}
 
 // Home
 .intro {
@@ -152,11 +177,16 @@ background-color: #E6FAFD;
 	&.wave {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	// position: relative;
 	}
 
 	&.wave img {
 		width: 100%;
-		object-fit: cover;
+		// object-fit: cover;
+		// position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 
@@ -171,6 +201,28 @@ background-color: #E6FAFD;
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, 15px); }
     to   { transform: translate(0, -0px); }    
+}
+
+@media (max-width: 600px) {
+
+	.intro-row {
+		display: flex;
+		align-items: center;
+
+		&.me {
+		padding-top: 50px;
+		font-size: 1.8em;
+		line-height: 1.2em;
+		}
+		&.info {
+			font-size: 2em;
+			line-height: 1.2em;
+		}
+
+		&.button {
+			font-size: 1.5em;
+		}
+	}
 }
 
 // Home Case Study Items
@@ -338,6 +390,65 @@ margin-top: 32px;
 	flex-direction: column;
 }
 
+// Home Case Study Media Queries
+
+@media (max-width: 600px) {
+
+ .cs-button {
+	 margin-bottom: 4em;
+ }
+ 
+ .cs-one {
+	padding: 20px;
+	margin-bottom: 120px;
+ }
+
+ .cs-two {
+	 padding: 20px;
+	 margin-bottom: 120px;
+ }
+
+ .cs-three {
+	 padding: 20px;
+	 margin-bottom: 120px;
+ }
+
+.cs-one-image {
+	// justify-content: center;
+	&.number-one::after {
+		font-size: 20em;
+		top: -30%;
+		bottom: 50%;
+		right: 50%;
+		left: 50%;
+	}
+	
+	&.number-two::after {
+		font-size: 20em;
+		top: 50%;
+		bottom: 50%;
+		right: 50%;
+		left: 50%;
+	}
+
+	&.number-three::after {
+		font-size: 20em;
+		top: -30%;
+		bottom: 50%;
+		right: 50%;
+		left: 50%;
+	}
+
+	.cs-one-image.number-two {
+		height: 200px;
+		width: 90%;
+	}
+}
+
+}
+
+// Column home layout on 992px and below
+
 // Footer
 
 .footer {
@@ -346,7 +457,9 @@ margin-top: 32px;
 	background-color: #F3FCFE;
 	padding-top: 120px;
 	padding-bottom: 120px;
+	z-index: 1;
 }
+
 
 .footer-icons {
 	display: flex;
