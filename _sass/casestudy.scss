@@ -1,0 +1,116 @@
+.casestudy-wrapper {
+  display: grid;
+  grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+  grid-template-rows: [header] auto [header-image] auto [header-end];
+}
+
+h2 {
+  font-size: 2.2rem;
+  padding-bottom: 0.8em;
+}
+
+.cs-subheader {
+  text-transform: uppercase;
+  color: $subheaderColor;
+  font-family: $bodyFont;
+  font-weight: 400;
+  font-size: 1.25em;
+  margin: 1em 0;
+}
+
+.image-shadow {
+  box-shadow: 0px 4px 30px #eeeeee;
+}
+
+// Case Study Header Section
+.casestudy-container {
+  display: flex;
+  flex-direction: column;
+  grid-column: content-start / content-end;
+  grid-row: auto;
+  padding: 3em 1em 5em 1em;
+  background-color: #fafafa;
+
+  .casestudy-container__tags-container {
+    display: flex;
+
+    .casestudy-container__tag {
+      font-family: $headerFont;
+      text-transform: uppercase;
+      margin: 0 0.5em 1.125rem 0;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5em 0.9em;
+      font-size: 0.7rem;
+      border: 3px solid $ctaColor;
+      color: $ctaColor;
+      border-radius: 40px;
+    }
+  }
+  .casestudy-container__image {
+    max-width: 100%;
+    padding-top: 2em;
+  }
+  .casestudy-container__description span {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+// Overview Section
+.overview-container {
+  padding-top: 3em;
+  margin-bottom: 3em;
+  grid-column: content-start / content-end;
+  grid-row: auto;
+
+  .overview-container__subtitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.8em 0 0.8em 0;
+  }
+
+  .overview-container__duration {
+    display: block;
+    padding: 1em 0 1em 0;
+    border: 0;
+    border-top: 2px solid $lanternDark;
+    margin: 1em 0 1em 0;
+  }
+}
+
+// Problem Section
+.problem-container {
+  padding: 3em 0 3em 0;
+  background-color: #fafafa;
+  grid-column: content-start / content-end;
+  grid-row: auto;
+}
+
+// Solution Section
+
+.solution-container {
+  padding: 3em 0 3em 0;
+  background-color: $lanternLight;
+  grid-column: content-start / content-end;
+  grid-row: auto;
+
+  .solution-container__image {
+    max-width: 100%;
+  }
+}
+
+.finalresults-container {
+  background-color: $lanternResults;
+  padding-top: 2em;
+  grid-column: content-start / content-end;
+  grid-row: auto;
+
+  .finalresults-container__info {
+    padding-bottom: 2em;
+  }
+  .finalresults-container__image {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+}

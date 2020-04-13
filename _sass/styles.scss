@@ -1,16 +1,3 @@
-$backgroundColor: white;
-$backgroundAccent: #e6fafd;
-$bodyFont: "Muli", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$headerFont: "gilroy-extrabold";
-$bodyColor: #1b1b1b;
-$accentColor: #ee4421;
-$lanternLight: #fde8f1;
-$lanternDark: #ed1572;
-$streamloanLight: #e6fafd;
-$streamloanDark: #09c9ed;
-$amazonLight: #fbe7d5;
-$amazonDark: #ed852d;
-
 *,
 *::before,
 *::after {
@@ -55,16 +42,13 @@ h6 {
   font-weight: 700;
 }
 
-.p {
-  margin-bottom: 1.5rem;
+h4 {
+  line-height: 1.45em;
+  font-size: 1.45em;
 }
 
-.cs-subheader {
-  text-transform: uppercase;
-  color: #7b7479;
-  font-family: $bodyFont;
-  font-weight: 400;
-  font-size: 24px;
+p {
+  line-height: 1.65em;
 }
 
 .nav {
@@ -82,6 +66,10 @@ h6 {
     padding: 2em;
   }
 
+  @media (min-width: 900px) {
+    padding: 2.5em;
+  }
+
   .nav__logo {
     text-transform: uppercase;
 
@@ -90,15 +78,28 @@ h6 {
     }
 
     @media (min-width: 700px) {
-      font-size: 1.3em;
+      font-size: 1.4em;
+    }
+
+    @media (min-width: 900px) {
+      font-size: 1.6em;
+    }
+
+    @media (min-width: 1010px) {
+      font-size: 1.8em;
     }
   }
+
   .nav__links-container {
     display: flex;
   }
 
   .nav__link-item + .nav__link-item {
     margin-left: 1em;
+
+    @media (min-width: 900px) {
+      margin-left: 1.5em;
+    }
   }
 
   .nav__link-item a {
@@ -106,6 +107,14 @@ h6 {
     color: inherit;
     text-transform: uppercase;
     font-size: 0.8rem;
+
+    @media (min-width: 900px) {
+      font-size: 1.2em;
+    }
+
+    @media (min-width: 1010px) {
+      font-size: 1.3em;
+    }
   }
 
   .nav__link-item--active {
@@ -114,7 +123,7 @@ h6 {
 
     &::after {
       content: "";
-      background-image: url("/assets/images/nav_wave.svg");
+      background-image: url("/assets/images/nav_wave_purple.svg");
       width: 100%;
       background-size: contain;
       background-repeat: no-repeat;
@@ -124,6 +133,13 @@ h6 {
       left: 0;
       top: 1em;
       z-index: 1;
+
+      @media (min-width: 900px) {
+        font-size: 1.3em;
+      }
+      @media (min-width: 1010px) {
+        font-size: 1.6em;
+      }
     }
   }
 }
@@ -148,6 +164,15 @@ h6 {
 
     @media (min-width: 720px) {
       font-size: 2.2em;
+    }
+
+    @media (min-width: 900px) {
+      font-size: 3em;
+    }
+
+    @media (min-width: 1010px) {
+      font-size: 3.7em;
+      padding-top: 1.5em;
     }
   }
 
@@ -175,6 +200,14 @@ h6 {
       font-size: 1.2em;
     }
 
+    @media (min-width: 900px) {
+      font-size: 1.4em;
+    }
+
+    @media (min-width: 1010px) {
+      font-size: 1.8em;
+    }
+
     & img {
       padding: 0.4em 0 2em 0;
       width: 2em;
@@ -195,6 +228,9 @@ h6 {
 
     @media (min-width: 550px) {
       height: 125px;
+    }
+    @media (min-width: 1010px) {
+      height: 300px;
     }
   }
 }
@@ -227,10 +263,11 @@ h6 {
   grid-column: content-start / content-end;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5em;
+  margin: 2em 0 5em 0;
+  align-content: center;
 
   @media (min-width: 500px) {
-    margin-top: 1em;
+    margin-top: 3em;
   }
 
   @media (min-width: 700px) {
@@ -240,12 +277,13 @@ h6 {
   @media (min-width: 900px) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 4em;
+    margin: 10em 0 12em 0;
   }
 }
 
 .portfolio-container__info {
   display: flex;
+  flex: 4;
   flex-direction: column;
 
   & h2 {
@@ -259,11 +297,25 @@ h6 {
     @media (min-width: 700px) {
       font-size: 2.4em;
     }
+
+    @media (min-width: 1010px) {
+      font-size: 3.3em;
+    }
   }
 
-  & p {
+  & .portfolio-container__description {
     margin-bottom: 1.125rem;
-    line-height: 1.5em;
+    line-height: 1.7em;
+
+    @media (min-width: 900px) {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      width: 70%;
+    }
+
+    @media (min-width: 1160px) {
+      margin-bottom: 2em;
+    }
   }
 }
 
@@ -279,10 +331,16 @@ h6 {
   align-items: center;
   padding: 0.5em 0.9em;
   font-size: 0.7rem;
+  border: 3px solid $ctaColor;
+  color: $ctaColor;
   border-radius: 40px;
 
   @media (min-width: 700px) {
     font-size: 1em;
+  }
+
+  @media (min-width: 1160px) {
+    margin-bottom: 1.5em;
   }
 }
 
@@ -290,13 +348,18 @@ h6 {
   font-family: $headerFont;
   padding: 1em 2em;
   display: inline-block;
-  background-color: gray;
   align-self: start;
   position: relative;
   margin-bottom: 2em;
+  color: $backgroundColor;
+  background-color: $ctaColor;
 
   @media (min-width: 900px) {
     font-size: 1.3em;
+  }
+
+  @media (min-width: 1160px) {
+    font-size: 1.4em;
   }
 
   &::after {
@@ -307,7 +370,8 @@ h6 {
     position: absolute;
     top: 0.5em;
     left: 0.5em;
-    background-color: red;
+    border: 4px solid #1b1b1b;
+    background-color: $backgroundColor;
     z-index: -1;
   }
 
@@ -323,59 +387,121 @@ h6 {
   }
 }
 
-.portfolio-container__image {
-  width: 124%;
-  display: flex;
-  position: relative;
-  left: -12%;
+// Portfolio Home Page Images
 
-  @media (min-width: 700px) {
-    width: 100%;
-    left: 0;
-  }
-
-  @media (min-width: 900px) {
-    justify-content: center;
-  }
-}
-
-.portfolio-container__image--portrait {
+.portfolio-container__image-wrapper {
+  z-index: 10;
+  flex: 7;
   width: 100%;
-
-  @media (min-width: 500px) {
-    width: 68%;
-  }
-
-  @media (min-width: 700px) {
-    width: 70%;
-  }
-
-  @media (min-width: 900px) {
-    width: 50%;
-  }
 }
 
-.vertical-row {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.portfolio-container__image {
+  width: 100%;
+  position: relative;
+  // left: -12%;
+
+  // @media (min-width: 700px) {
+  //   width: 80%;
+  //   left: 0;
+  // }
+
+  @media (min-width: 900px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1010px) {
+    align-self: center;
+    min-height: 200px;
+  }
+
+  // For portrait images
+  &--portrait {
+    max-width: 100%;
+
+    @media (min-width: 500px) {
+      width: 68%;
+    }
+
+    @media (min-width: 700px) {
+      width: 50%;
+    }
+
+    @media (min-width: 900px) {
+      width: 60%;
+    }
+  }
 }
 
 // Project Specific Styling
 
 // Lantern
 .portfolio-container--lantern {
-  .portfolio-container__tag {
-    color: $lanternDark;
-    background-color: $lanternLight;
+  .portfolio-container__image-wrapper {
+    padding-top: 3em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 900px) {
+      padding-top: 0;
+    }
+
+    img {
+      position: relative;
+
+      @media (min-width: 900px) {
+        left: 2em;
+      }
+    }
   }
 
-  .btn {
-    color: $lanternDark;
-    background-color: $lanternLight;
+  .portfolio-container__image-wrapper::after {
+    content: "1";
+    font-size: 100vw;
+    top: -30%;
+    right: -10%;
+    z-index: -1;
+    color: $backgroundColor;
+    text-shadow: -5px -5px 0 $lanternDark, 5px -5px 0 $lanternDark, -5px 5px 0 $lanternDark, 5px 5px 0 $lanternDark;
+    font-family: $headerFont;
+    position: absolute;
 
-    &::after {
-      background-color: $lanternDark;
+    @media (min-width: 400px) {
+      top: -45%;
+      right: -5%;
+    }
+    @media (min-width: 550px) {
+      top: -50%;
+    }
+    @media (min-width: 650px) {
+      top: -55%;
+    }
+    @media (min-width: 900px) {
+      font-size: 70vw;
+      top: -42%;
+      right: -12%;
+    }
+    @media (min-width: 950px) {
+      font-size: 70vw;
+      top: -50%;
+      right: -12%;
+    }
+    @media (min-width: 1000px) {
+      // font-size: 60vw;
+      // top: -38%;
+      right: -13%;
+    }
+    @media (min-width: 1050px) {
+      top: -65%;
+      // font-size: 50vw;
+      right: -13%;
+    }
+    @media (min-width: 1200px) {
+      // top: -50%;
+    }
+    @media (min-width: 1255px) {
+      font-size: 60vw;
     }
   }
 }
@@ -386,34 +512,114 @@ h6 {
     flex-direction: row-reverse;
   }
 
-  .portfolio-container__tag {
-    color: $streamloanDark;
-    background-color: $streamloanLight;
+  .portfolio-container__info {
+    justify-content: center;
+    flex: 3;
+    position: relative;
   }
 
-  .btn {
-    color: $streamloanDark;
-    background-color: $streamloanLight;
+  .portfolio-container__image-wrapper {
+    flex: 4;
+    padding-top: 3em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 
-    &::after {
-      background-color: $streamloanDark;
+    @media (min-width: 900px) {
+      padding-top: 0;
     }
+  }
+
+  .portfolio-container__image--portrait {
+    width: 75%;
+  }
+
+  .portfolio-container__image-wrapper::after {
+    content: "2";
+    font-size: 110vw;
+    top: -20%;
+    right: -10%;
+    z-index: -1;
+    font-family: $headerFont;
+    position: absolute;
+    color: $backgroundColor;
+    text-shadow: -8px 0 $streamloanDark, 0 8px $streamloanDark, 8px 0 $streamloanDark, 0 -8px $streamloanDark;
+
+    @media (min-width: 400px) {
+      top: -30%;
+      // right: -5%;
+    }
+    @media (min-width: 550px) {
+      top: -31%;
+    }
+    @media (min-width: 900px) {
+      font-size: 70vw;
+      top: -50%;
+      left: -20%;
+    }
+    @media (min-width: 1000px) {
+      top: -40%;
+    }
+    @media (min-width: 1050px) {
+      top: -45%;
+    }
+    @media (min-width: 1200px) {
+      top: -30%;
+      // left:33%;
+    }
+  }
+
+  .portfolio-container__counter {
+    position: relative;
+  }
+  .portfolio-container__counter::after {
+    // content: "2";
+    font-size: 25em;
+    top: -300px;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    z-index: -1;
+    color: $streamloanLight;
+    font-family: $headerFont;
+    position: absolute;
   }
 }
 
 // Amazon
 .portfolio-container--amazon {
-  .portfolio-container__tag {
-    color: $amazonDark;
-    background-color: $amazonLight;
+  .portfolio-container__image-wrapper {
+    position: relative;
+    padding-top: 1em;
   }
 
-  .btn {
-    color: $amazonDark;
-    background-color: $amazonLight;
+  .portfolio-container__image-wrapper::after {
+    content: "3";
+    font-size: 90vw;
+    top: -40%;
+    right: -10%;
+    z-index: -1;
+    color: $backgroundColor;
+    text-shadow: -8px 0 $amazonDark, 0 8px $amazonDark, 8px 0 $amazonDark, 0 -8px $amazonDark;
 
-    &::after {
-      background-color: $amazonDark;
+    font-family: $headerFont;
+    position: absolute;
+
+    @media (min-width: 425px) {
+      font-size: 80vw;
+    }
+    @media (min-width: 700px) {
+      font-size: 75vw;
+    }
+    @media (min-width: 900px) {
+      font-size: 65vw;
+    }
+    @media (min-width: 1100px) {
+      font-size: 60vw;
+    }
+    @media (min-width: 1250px) {
+      font-size: 53vw;
     }
   }
 }
@@ -424,14 +630,20 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: $backgroundAccent;
-  padding: 2.5em;
+  background-color: $footerBackground;
+  padding: 4.5em 2.5em;
 
   .footer__headline {
     padding-bottom: 1.8rem;
+    color: $backgroundAccent;
 
     @media (min-width: 500px) {
       font-size: 1.2em;
+    }
+
+    @media (min-width: 900px) {
+      font-size: 1.5em;
+      // padding-top: 2rem;
     }
   }
 
@@ -453,20 +665,21 @@ h6 {
     margin-right: 0.5em;
 
     a {
-      color: $bodyColor;
+      color: $backgroundAccent;
       border-radius: 0.8em;
       padding: 0.4em;
     }
 
     & a:hover {
-      background-color: #fbe7d5;
-      color: #ed852d;
+      background-color: $backgroundAccent;
+      color: $accentColor;
     }
   }
 
   .footer__copyright {
     font-size: 0.7em;
-    margin-top: 2em;
+    padding: 4em 0 2em 0;
+    color: $backgroundAccent;
 
     @media (min-width: 500px) {
       font-size: 1em;

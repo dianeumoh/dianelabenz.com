@@ -13,23 +13,6 @@
 
     gtag('config', 'UA-155847764-1');
   </script>
-  <!-- Wave image resize -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    // $(document).ready(function () {
-    //   var $winwidth = $(window).width();
-    //   $(".wave img").attr({
-    //     width: $winwidth
-    //   });
-    //   $(window).bind("resize", function () {
-    //     var $winwidth = $(window).width();
-    //     $(".wave img").attr({
-    //       width: $winwidth
-    //     });
-    //   });
-    // });
-  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ page.title }}</title>
@@ -37,12 +20,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Custom-->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="/assets/css/reset.css" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="/assets/css/hover.css" rel="stylesheet">
+  <link href="/assets/css/casestudy.css" rel="stylesheet">
 
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/root/apple-touch-icon.png" />
@@ -52,6 +34,8 @@
   <link
     href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,500i,600,600i,700,700i,800,800i,900&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <!--Icons-->
   <script src="https://kit.fontawesome.com/e33123159d.js" crossorigin="anonymous"></script>
@@ -69,8 +53,8 @@
       </span>
       A product designer who codes with a penchant for spicy foods 🔥.
     </h1>
-    <div class="intro__btn floating"><span>Take a look</span><img src="/assets/images/Home_arrow.svg"></div>
-    <img class="intro__wave" src="/assets/images/Wave.png">
+    <div class="intro__btn floating"><span>Take a look</span><img src="/assets/images/Home_arrow_purple.svg"></div>
+    <img class="intro__wave" src="/assets/images/Wave_2_purple.png">
   </div>
   <!-- End Intro -->
 
@@ -89,12 +73,14 @@
           Dive right in
         </div>
       </div>
-      <img class="portfolio-container__image" src="/assets/images/Lantern_home_mockup_new.png">
+      <div class="portfolio-container__image-wrapper">
+        <img class="portfolio-container__image" src="/assets/images/Lantern_home_mockup_new.png">
+      </div>
     </div>
 
     <!-- Case Study StreamLoan  -->
     <div class="portfolio-container portfolio-container--streamloan">
-      <div class="portfolio-container__info vertical-row">
+      <div class="portfolio-container__info">
         <h2>StreamLoan</h2>
         <div class="portfolio-container__tags-container">
           <div class="portfolio-container__tag">Mobile</div>
@@ -105,7 +91,9 @@
           See the solution
         </div>
       </div>
-      <img class="portfolio-container__image--portrait" src="/assets/images/Streamloan_home_mockup_new.png">
+      <div class="portfolio-container__image-wrapper">
+        <img class="portfolio-container__image--portrait" src="/assets/images/Streamloan_home_mockup_new.png">
+      </div>
     </div>
 
     <!-- Case Study Amazon -->
@@ -122,7 +110,9 @@
           Coming soon
         </div>
       </div>
-      <img class="portfolio-container__image" src="/assets/images/Amazonkids_homescreen.png">
+      <div class="portfolio-container__image-wrapper">
+        <img class="portfolio-container__image" src="/assets/images/Amazonkids_homescreen.png">
+      </div>
     </div>
   </div>
   <!-- Footer -->
