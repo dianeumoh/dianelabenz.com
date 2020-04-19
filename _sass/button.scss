@@ -1,0 +1,44 @@
+.btn {
+  font-family: $headerFont;
+  padding: 1em 2em;
+  display: inline-block;
+  align-self: start;
+  position: relative;
+  margin-bottom: 2em;
+  color: $backgroundDefault;
+  background-color: $ctaColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (min-width: 900px) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: 1160px) {
+    font-size: 1.4em;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    border: 4px solid #1b1b1b;
+    background-color: $backgroundDefault;
+    z-index: -1;
+  }
+
+  &:hover {
+    top: 0.25em;
+    left: 0.25em;
+    transition: position 0.5s ease-out;
+  }
+
+  &:hover::after {
+    top: 0.25em;
+    left: 0.25em;
+  }
+}

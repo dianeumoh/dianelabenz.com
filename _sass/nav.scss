@@ -1,0 +1,92 @@
+.nav {
+  background-color: $backgroundAccent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $headerFont;
+  padding: 1em;
+
+  @media (min-width: 500px) {
+    padding: 1.5em;
+  }
+  // @media (min-width: 700px) {
+  //   padding: 2em;
+  // }
+
+  // @media (min-width: 900px) {
+  //   padding: 2.5em;
+  // }
+
+  .nav__logo {
+    text-transform: uppercase;
+
+    @media (min-width: 500px) {
+      font-size: 1.2em;
+    }
+
+    @media (min-width: 700px) {
+      font-size: 1.4em;
+    }
+
+    // @media (min-width: 900px) {
+    //   font-size: 1.6em;
+    // }
+
+    // @media (min-width: 1010px) {
+    //   font-size: 1.6em;
+    // }
+  }
+
+  .nav__links-container {
+    display: flex;
+  }
+
+  .nav__link-item + .nav__link-item {
+    margin-left: 1em;
+
+    @media (min-width: 900px) {
+      margin-left: 2.5em;
+    }
+  }
+
+  .nav__link-item a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+    @media (min-width: 900px) {
+      font-size: 1em;
+    }
+
+    // @media (min-width: 1010px) {
+    //   font-size: 1.3em;
+    // }
+  }
+
+  .nav__link-item--active {
+    color: $accentColor;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("/assets/images/nav_wave_purple.svg");
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 20px;
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 1em;
+      z-index: 1;
+
+      @media (min-width: 900px) {
+        font-size: 1.3em;
+      }
+      @media (min-width: 1010px) {
+        font-size: 1.6em;
+      }
+    }
+  }
+}
