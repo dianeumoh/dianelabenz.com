@@ -1,5 +1,5 @@
 .nav {
-  background-color: $backgroundAccent;
+  background-color: $navBackground;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,7 @@
   padding: 1em;
 
   @media (min-width: 500px) {
-    padding: 1.5em;
+    padding: 2em;
   }
   // @media (min-width: 700px) {
   //   padding: 2em;
@@ -35,6 +35,15 @@
     // @media (min-width: 1010px) {
     //   font-size: 1.6em;
     // }
+
+    & a {
+      color: $bodyColor;
+      text-decoration: none;
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
   }
 
   .nav__links-container {
@@ -44,6 +53,9 @@
   .nav__link-item + .nav__link-item {
     margin-left: 1em;
 
+    @media (min-width: 500px) {
+      margin-left: 2em;
+    }
     @media (min-width: 900px) {
       margin-left: 2.5em;
     }
@@ -56,12 +68,16 @@
     font-size: 0.8rem;
 
     @media (min-width: 900px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
 
     // @media (min-width: 1010px) {
     //   font-size: 1.3em;
     // }
+
+    &:hover {
+      color: $accentColor;
+    }
   }
 
   .nav__link-item--active {
@@ -80,13 +96,6 @@
       left: 0;
       top: 1em;
       z-index: 1;
-
-      @media (min-width: 900px) {
-        font-size: 1.3em;
-      }
-      @media (min-width: 1010px) {
-        font-size: 1.6em;
-      }
     }
   }
 }

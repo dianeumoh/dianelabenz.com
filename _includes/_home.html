@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="/assets/css/hover.css" rel="stylesheet">
-  <link href="/assets/css/casestudy.css" rel="stylesheet">
+  <link href="/assets/css/nav-home.css" rel="stylesheet">
 
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/root/apple-touch-icon.png" />
@@ -39,6 +39,7 @@
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <!--Icons-->
   <script src="https://kit.fontawesome.com/e33123159d.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -49,18 +50,21 @@
   <div class="intro">
     <h1 class="intro__headline">
       <span class="intro__headline-welcome">
-        Welcome, I'm Diane!
+        Welcome, I'm Diane -
       </span>
-      A product designer who codes with a penchant for spicy foods 🔥.
+      Product Designer, Coder,<span class="intro__headline-welcome--break">& Spicy Food Enthusiast <i
+          class="fas fa-fire-alt intro__headline-icon"></i>.</span>
     </h1>
-    <div class="intro__btn floating"><span>Take a look</span><img src="/assets/images/Home_arrow_purple.svg"></div>
-    <img class="intro__wave" src="/assets/images/Wave_2_purple.png">
+
+    <div class="intro__btn floating"><span><a class="start-scroll" href="#scroll-down">Take a look</a></span><img
+        class="start-scroll" src="/assets/images/Home_arrow_purple.svg"></div>
+    <img class="intro__wave" src="/assets/images/Wave_2_purple_outline.png">
   </div>
   <!-- End Intro -->
-
+  <div class="portfolio-container__start" id="scroll-down"></div>
   <!-- Case Study Lantern -->
   <div class="portfolio">
-    <div class="portfolio-container portfolio-container--lantern">
+    <div data-aos="fade-up" class="portfolio-container portfolio-container--lantern">
       <div class="portfolio-container__info">
         <h2>Lantern</h2>
         <div class="portfolio-container__tags-container">
@@ -74,12 +78,12 @@
         </a>
       </div>
       <div class="portfolio-container__image-wrapper">
-        <img class="portfolio-container__image" src="/assets/images/Lantern_home_mockup_new.png">
+        <img class="portfolio-container__image" src="/assets/images/Lantern_clay_home.png">
       </div>
     </div>
 
     <!-- Case Study StreamLoan  -->
-    <div class="portfolio-container portfolio-container--streamloan">
+    <div data-aos="fade-up" class="portfolio-container portfolio-container--streamloan">
       <div class="portfolio-container__info">
         <h2>StreamLoan</h2>
         <div class="portfolio-container__tags-container">
@@ -92,13 +96,13 @@
         </a>
       </div>
       <div class="portfolio-container__image-wrapper">
-        <img class="portfolio-container__image--portrait" src="/assets/images/Streamloan_home_mockup_new.png">
+        <img class="portfolio-container__image--portrait" src="/assets/images/Streamloan_clay_home.png">
       </div>
     </div>
 
     <!-- Case Study Amazon -->
 
-    <div class="portfolio-container portfolio-container--amazon portfolio-container--info-first">
+    <div data-aos="fade-up" class="portfolio-container portfolio-container--amazon portfolio-container--info-first">
       <div class="portfolio-container__info">
         <h2>Amazon</h2>
         <div class="portfolio-container__tags-container">
@@ -111,7 +115,7 @@
         </div>
       </div>
       <div class="portfolio-container__image-wrapper">
-        <img class="portfolio-container__image" src="/assets/images/Amazonkids_homescreen.png">
+        <img class="portfolio-container__image" src="/assets/images/Amazon_clay_home.png">
       </div>
     </div>
   </div>
@@ -121,6 +125,16 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+  $(function () {
+    $(".start-scroll").click(function (e) {
+      e.preventDefault();
+      var position = $('#scroll-down').offset().top;
+
+      $("body, html").animate({
+        scrollTop: position
+      } /* speed */ );
+    });
+  });
 </script>
 
 </html>
