@@ -1,7 +1,10 @@
 <div class="nav">
   <div class="nav__logo"><a href="/">Diane Labenz</a></div>
   <ol class="nav__links-container">
-    <li class="nav__link-item nav__link-item--active"><a href="/">Work</a></li>
-    <li class="nav__link-item"><a href="#">About</a></li>
+    <li class="nav__link-item {% if include.active == "home" %} nav__link-item--active {% endif %}"><a href="/">Work</a>
+    </li>
+    <li class="nav__link-item {% if include.active == "about" %} nav__link-item--active {% endif %}"><a
+        href="/about/">About</a>
+    </li>
   </ol>
 </div>

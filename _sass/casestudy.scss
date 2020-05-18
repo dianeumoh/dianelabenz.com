@@ -52,6 +52,9 @@ a {
   &--accent-background {
     background-color: $lanternResults;
   }
+  &--background-gray {
+    background-color: $backgroundCasestudy;
+  }
 
   &--lantern-results {
     background-color: $lanternResults;
@@ -103,6 +106,13 @@ a {
     font-weight: 600;
     padding-top: 0.8em;
     margin-bottom: 0.7em;
+  }
+  .case-study-section__subtitle--card {
+    text-transform: capitalize;
+    font-weight: 600;
+    padding-top: 0.8em;
+    margin-bottom: 0.7em;
+    font-size: 1.125em;
   }
 
   .case-study-section__duration {
@@ -254,7 +264,7 @@ a {
 
 // Research Section
 
-.case-study-section__research-container {
+.case-study-section__card-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -286,7 +296,7 @@ a {
     font-size: 1.5em;
   }
 
-  .case-study-section__research-item {
+  .case-study-section__card-item {
     flex: 1;
     margin-bottom: 2em;
     padding: 1.5em;
@@ -310,6 +320,10 @@ a {
     margin: 3em 0 3em 0;
     display: flex;
     flex-wrap: wrap;
+  }
+  .case-study-section__image-container {
+    display: flex;
+    justify-content: center;
   }
 }
 
