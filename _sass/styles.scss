@@ -102,7 +102,9 @@ p {
   }
 
   .intro__headline-welcome--break {
-    display: block;
+    @media (min-width: 400px) {
+      display: block;
+    }
   }
 
   .intro__headline-icon {

@@ -166,8 +166,8 @@ a {
     width: 100%;
   }
   .case-study-section__image--row-reverse-streamloan {
-    max-width: 30%;
-    width: 30%;
+    max-width: 100%;
+    margin-right: 10%;
   }
 }
 
@@ -178,6 +178,7 @@ a {
 .case-study-section__image--hero-streamloan {
   max-width: 75%;
   width: 75%;
+  margin-bottom: 1em;
 }
 
 .case-study-section__content {
@@ -195,7 +196,7 @@ a {
     li {
       margin-bottom: 0.5em;
       line-height: 1.6;
-      text-indent: 2em;
+      // text-indent: 2em;
     }
   }
 }
@@ -230,16 +231,17 @@ a {
   flex-direction: column;
   grid-column: content-start / content-end;
 
-  &--narrow {
-    & > * {
-      width: 84%;
-      align-self: center;
-    }
-  }
+  // &--narrow {
+  //   & > * {
+  //     width: 84%;
+  //     align-self: center;
+  //   }
+  // }
 }
 
 .case-study-section__image {
   max-width: 100%;
+  height: auto;
   grid-column: content-start / content-end;
 
   &--image-shadow {
@@ -371,6 +373,12 @@ a {
   }
 }
 
+.case-study-section__info {
+  h1 {
+    font-size: 3em;
+  }
+}
+
 .case-study-section_streamloan-iteration {
   display: flex;
   justify-content: space-between;
@@ -421,6 +429,27 @@ a {
 }
 
 @media (min-width: 500px) {
+  .case-study-section__image--row-reverse-streamloan {
+    max-width: 40%;
+    width: 40%;
+  }
+
+  .case-study-section__list {
+    ul {
+      margin-left: 0.9em;
+
+      li {
+        text-indent: 2em;
+      }
+    }
+  }
+
+  .case-study-section__info {
+    h1 {
+      font-size: 3.625em;
+    }
+  }
+
   .case-study-section__image--portrait {
     max-width: 35%;
     height: auto;
@@ -431,6 +460,7 @@ a {
     height: auto;
   }
 }
+
 @media (min-width: 600px) {
   .case-study-section_streamloan-iteration {
     flex-direction: row;
@@ -465,6 +495,13 @@ a {
     font-size: 1.25em;
   }
 
+  .case-study-section__content--narrow {
+    & > * {
+      width: 84%;
+      align-self: center;
+    }
+  }
+
   .case-study-section__header--lantern {
     width: 100%;
     margin-left: 10%;
@@ -484,7 +521,9 @@ a {
   }
 
   .case-study-section__image--row-reverse-streamloan {
-    margin-left: 10%;
+    // margin-left: 5%;
+    max-width: 40%;
+    width: 30%;
   }
 
   .case-study-section__image--portrait {
@@ -494,7 +533,6 @@ a {
   }
   .case-study-section__image--portrait--solution {
     max-width: 30%;
-    width: 40%;
     height: auto;
   }
 
@@ -632,6 +670,7 @@ a {
     }
   }
   .case-study-section__content--narrow-streamloan-reverse {
+    // margin-left: 20%;
     & h3,
     p {
       width: 70%;
