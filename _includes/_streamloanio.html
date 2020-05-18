@@ -12,7 +12,7 @@
            <div class="case-study-section__tag">SAAS</div>
          </div>
          <p class="case-study-section__description--hero">
-           A seamless loan management <span>process for loan officers</span>
+           Helping loan officers <span>manage loan requirements</span>
          </p>
        </div>
        <img class="case-study-section__image case-study-section__image--hero-streamloan"
@@ -38,4 +38,17 @@
    {% include _streamloan_results.html %}
    {% include _streamloan_learnings.html %}
  </div>
+ <script>
+   $(function () {
+     $(".start-scroll").click(function (e) {
+       e.preventDefault();
+       $('.final-prototype-fade').removeAttr('data-aos');
+       var position = $('#final-prototype').offset().top;
+
+       $("body, html").animate({
+         scrollTop: position
+       }, 1000);
+     });
+   });
+ </script>
  {% include _footer.html %}

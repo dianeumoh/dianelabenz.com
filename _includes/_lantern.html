@@ -37,4 +37,17 @@
 
 
  </div>
+ <script>
+   $(function () {
+     $(".start-scroll").click(function (e) {
+       e.preventDefault();
+       $('.final-prototype-fade').removeAttr('data-aos');
+       var position = $('#final-prototype').offset().top;
+
+       $("body, html").animate({
+         scrollTop: position
+       }, 1000);
+     });
+   });
+ </script>
  {% include _footer.html %}

@@ -130,7 +130,7 @@ a {
   }
 
   .case-study-section__business {
-    ol {
+    ul {
       list-style-type: circle;
       list-style-position: inside;
       margin-left: 1.1em;
@@ -167,7 +167,7 @@ a {
   }
   .case-study-section__image--row-reverse-streamloan {
     max-width: 30%;
-    width: 25%;
+    width: 30%;
   }
 }
 
@@ -187,7 +187,7 @@ a {
 }
 
 .case-study-section__list {
-  ol {
+  ul {
     list-style-type: circle;
     list-style-position: inside;
     margin-left: 0.8em;
@@ -333,6 +333,36 @@ a {
   align-self: center;
 }
 
+.case-study-section__numbered-container {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  counter-reset: li;
+  margin-left: 2em;
+
+  li {
+    margin: 0 0 1.5em 3em;
+    position: relative;
+    &::before {
+      counter-increment: li;
+      content: counter(li, decimal-leading-zero);
+      color: $streamloanAccent;
+      margin-right: 0.25em;
+      font-family: $headerFont;
+      font-size: 2em;
+      position: absolute;
+      left: -1.5em;
+      top: -0.1em;
+    }
+  }
+}
+
+.case-study-section__numbered-header {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
 // Streamloan
 .case-study-section {
   &--streamloanio {
@@ -358,7 +388,7 @@ a {
     text-align: center;
     font-weight: 400;
     color: $subheaderColor;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   &--image {
@@ -462,6 +492,12 @@ a {
     height: auto;
     margin-right: 20%;
   }
+  .case-study-section__image--portrait--solution {
+    max-width: 30%;
+    width: 40%;
+    height: auto;
+  }
+
   .case-study-section__content--narrow > div:first-child {
     margin-right: 10%;
   }
