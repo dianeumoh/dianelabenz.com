@@ -19,6 +19,9 @@
       "source": "**/about/",
       "destination": "/about.html"
     }, {
+      "source": "**/opendisclosure/",
+      "destination": "/opendisclosure.html"
+    }, {
       "source": "**/streamloanio/",
       "destination": "/streamloanio.html"
     }]
