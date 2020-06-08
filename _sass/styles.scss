@@ -532,16 +532,20 @@ p {
 // Amazon
 .portfolio-container--amazon {
   padding-bottom: 8em;
-  flex-direction: row-reverse;
+
   .portfolio-container__image-wrapper {
     position: relative;
     margin-top: 1em;
     padding-top: 1em;
   }
+  @media (min-width: 900px) {
+    flex-direction: row-reverse;
 
-  .portfolio-container__info {
-    margin-left: 6em;
+    .portfolio-container__info {
+      margin-left: 6em;
+    }
   }
+
   // .portfolio-container__image-wrapper::after {
   //   content: "3";
   //   font-size: 90vw;
