@@ -1,0 +1,43 @@
+ {% include _navbar.html %}
+ <div class="project-wrapper">
+
+   <div class="case-study-section case-study-section--header case-study-section--lantern case-study-section--open-hero">
+     <div class="case-study-section__content case-study-section__content--two-column-hero">
+       <div class="case-study-section__info">
+         <h1>Open Disclosure</h1>
+         <div class="case-study-section__tags-container">
+           <div class="case-study-section__tag">UI/UX</div>
+           <div class="case-study-section__tag">WEB</div>
+           <div class="case-study-section__tag">Non-Profit</div>
+         </div>
+         <p class="case-study-section__description case-study-section__description--hero">Making campaign finance data
+           accessible to voters</p>
+       </div>
+       <img class="case-study-section__image" src="/assets/images/OpenDisclosure_clay_hero.png">
+     </div>
+   </div>
+
+   {% include _opendisclosure_overview.html %}
+
+   {% include _opendisclosure_problem.html %}
+
+   {% include _opendisclosure_solution.html %}
+
+
+
+
+ </div>
+ <script>
+   $(function () {
+     $(".start-scroll").click(function (e) {
+       e.preventDefault();
+       $('.final-prototype-fade').removeAttr('data-aos');
+       var position = $('#final-prototype').offset().top;
+
+       $("body, html").animate({
+         scrollTop: position
+       }, 1000);
+     });
+   });
+ </script>
+ {% include _footer.html %}
