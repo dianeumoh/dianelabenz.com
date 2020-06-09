@@ -182,8 +182,7 @@ a {
   width: 50%;
 }
 .case-study-section__image--hero-streamloan {
-  max-width: 75%;
-  width: 75%;
+  max-width: 100%;
   margin-bottom: 1em;
 }
 
@@ -243,6 +242,31 @@ a {
   //     align-self: center;
   //   }
   // }
+  &--row-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img {
+      max-width: 100%;
+      margin-bottom: 6em;
+    }
+
+    .case-study-section__subheader {
+      text-align: center;
+    }
+    .case-study-section__cta {
+      text-align: center;
+      & a {
+        color: $ctaColor;
+        text-decoration: underline;
+
+        &:hover {
+          color: $accentColor;
+        }
+      }
+    }
+  }
 }
 
 .case-study-section__image {
@@ -384,17 +408,6 @@ a {
   }
 }
 
-.case-study-section__cta {
-  text-align: center;
-  & a {
-    color: $ctaColor;
-
-    &:hover {
-      color: $accentColor;
-    }
-  }
-}
-
 .case-study-section__numbered-header {
   display: block;
   margin: 0.5em 0;
@@ -453,21 +466,29 @@ a {
   h3 {
     padding-bottom: 1.5em;
   }
-
-  img {
-    width: 80%;
-  }
 }
 
 .case-study-section__image--finalscreen {
-  max-width: 80%;
+  max-width: 100%;
   margin-bottom: 1em;
 }
 
+// Media queries start here
+
 @media (min-width: 500px) {
+  .case-study-section__image--hero-streamloan {
+    max-width: 75%;
+    width: 75%;
+  }
+
   .case-study-section__image--row-reverse-streamloan {
     max-width: 40%;
     width: 40%;
+  }
+
+  .case-study-section__image--finalscreen {
+    max-width: 80%;
+    margin-bottom: 1em;
   }
 
   // .case-study-section__list {
@@ -656,6 +677,17 @@ a {
     }
   }
 
+  .case-study-section__content--row-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img {
+      max-width: 70%;
+      margin-bottom: 4em;
+    }
+  }
+
   .case-study-section__image--validation {
     margin-top: 2em;
   }
@@ -695,21 +727,6 @@ a {
     &--row {
       margin-bottom: 8em;
     }
-
-    &--row-open {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      & img {
-        max-width: 70%;
-        margin-bottom: 4em;
-      }
-    }
-  }
-
-  .case-study-section__subheader {
-    text-align: center;
   }
 
   .case-study-section__content--narrow-streamloan {
