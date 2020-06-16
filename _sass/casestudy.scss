@@ -29,6 +29,17 @@ a {
   color: $backgroundDefault;
 }
 
+ul {
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 0.8em;
+
+  li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+    // text-indent: 2em;
+  }
+}
 // All Case Studies
 
 .case-study-section {
@@ -281,12 +292,14 @@ a {
 
 .case-study-section__image-container {
   display: flex;
-  // flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   margin-top: 2.5em;
-  & h5 {
-    text-align: center;
+  & p {
+    // text-align: center;
     margin-bottom: 2em;
+    font-weight: bold;
+    padding-top: 2em;
   }
 
   & div {
@@ -295,7 +308,7 @@ a {
 }
 .case-study-section__image--row {
   max-width: 100%;
-  // margin-left: 2em;
+  margin-bottom: 2em;
 }
 
 .finalresults-container {
